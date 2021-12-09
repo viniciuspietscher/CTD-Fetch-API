@@ -1,0 +1,26 @@
+.hide {
+    display: none;
+}
+
+.planetImage {
+    background: red;
+    height: 150px;
+    width: 150px;
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-image: var(--bg-url);
+}
+
+.tatooine .planetImage{
+    --bg-url: url('https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Tatooine_%28fictional_desert_planet%29.jpg/220px-Tatooine_%28fictional_desert_planet%29.jpg');
+}
+
+.hoth .planetImage {
+    --bg-url: url('https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Hothplanetsurface.jpg/220px-Hothplanetsurface.jpg')
+}
+
+.yavin-iv .planetImage {
+    --bg-url: url('https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Star_Wars_Planet_Yavin_with_Moon.jpg/290px-Star_Wars_Planet_Yavin_with_Moon.jpg')
+}
+

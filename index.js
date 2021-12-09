@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const planetSelect = document.getElementById('planets')
+  const container = document.querySelector('.dataContainer');
 
   fetch('https://www.swapi.tech/api/planets/')
     .then(response => response.json())
@@ -16,22 +17,42 @@ document.addEventListener("DOMContentLoaded", function() {
   const selectPlanet = (event) => {
     const planet_id = event.target.value;
     if (!planet_id) {
-      document.querySelectorAll('.planetData').forEach(p => {
-        p.textContent = ''
-      })
       return
     }
+
     fetch(`https://www.swapi.tech/api/planets/${planet_id}`)
       .then(response => response.json())
       .then(data => {
-        document.getElementById('planet_name').textContent = `Planet name: ${data.result.properties.name}`
-        document.getElementById('planet_diameter').textContent = `Planet diameter: ${data.result.properties.diameter}`
-        document.getElementById('planet_rotation_period').textContent = `Planet rotation period: ${data.result.properties.rotation_period}`
-        document.getElementById('planet_orbital_period').textContent = `Planet orbital period: ${data.result.properties.orbital_period}`
-        document.getElementById('planet_population').textContent = `Planet population: ${data.result.properties.population}`
-        document.getElementById('planet_climate').textContent = `Planet climate: ${data.result.properties.climate}`
-        document.getElementById('planet_terrain').textContent = `Planet terrain: ${data.result.properties.terrain}`
-        document.getElementById('planet_surface_water').textContent = `Planet surface water: ${data.result.properties.surface_water}`
+        const planets = document.querySelectorAll('.planet')
+        planets.forEach(planet => planet.classList.add('hide'))
+
+        const planetName = data.result.properties.name.toLowerCase().replace(' ', '-');
+
+        let planetContainer = document.querySelector(`.${planetName}`)
+        if (planetContainer) {
+          planetContainer.classList.remove('hide')
+          return
+        }
+
+        //create planet
+        planetContainer = document.createElement('div')
+        planetContainer.classList.add('planet', planetName)
+
+        const keys = ['name','diameter','rotation_period','orbital_period','population','climate','terrain','surface_water']
+        keys.forEach(key => {
+          const value = data.result.properties[key]
+          if (value) {
+            const p = document.createElement('p')
+            p.innerText = `Planet ${key}: ${value}`
+            planetContainer.appendChild(p);
+          } else {
+            console.error(`Error! Key: "${key}" is "${value}"`)
+          }
+        })
+        const planetImage = document.createElement('span')
+        planetImage.classList.add('planetImage')
+        planetContainer.appendChild(planetImage)
+        container.appendChild(planetContainer)
       })
   }
 
