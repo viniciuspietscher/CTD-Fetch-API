@@ -12,8 +12,22 @@
     background-image: var(--bg-url);
 }
 
+.characterImage {
+  background: red;
+  height: 150px;
+  width: 150px;
+  display: block;
+  position: relative;
+  background-size: cover;
+  background-image: var(--bg-url);
+}
+
 .tatooine .planetImage{
     --bg-url: url('https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Tatooine_%28fictional_desert_planet%29.jpg/220px-Tatooine_%28fictional_desert_planet%29.jpg');
+}
+
+.alderaan .planetImage{
+  --bg-url: url('https://upload.wikimedia.org/wikipedia/en/6/60/Alderaan250ppx.PNG');
 }
 
 .hoth .planetImage {
@@ -24,3 +38,66 @@
     --bg-url: url('https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Star_Wars_Planet_Yavin_with_Moon.jpg/290px-Star_Wars_Planet_Yavin_with_Moon.jpg')
 }
 
+.dagobah .planetImage {
+  --bg-url: url('https://upload.wikimedia.org/wikipedia/en/1/1c/Dagobah.jpg')
+}
+
+.bespin .planetImage {
+  --bg-url: url('https://static.wikia.nocookie.net/starwars/images/1/11/Bespin-SWCT.png')
+}
+
+.endor .planetImage {
+  --bg-url: url('https://upload.wikimedia.org/wikipedia/en/d/d4/PlanetEndor.jpg')
+}
+
+.naboo .planetImage {
+  --bg-url: url('https://static.wikia.nocookie.net/starwars/images/f/f0/Naboo_planet.png')
+}
+
+.coruscant .planetImage {
+  --bg-url: url('https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Coruscant.png/330px-Coruscant.png')
+}
+
+.kamino .planetImage {
+  --bg-url: url('https://static.wikia.nocookie.net/starwars/images/5/52/Kamino-DB.png')
+}
+
+.luke-skywalker .characterImage {
+  --bg-url: url('https://upload.wikimedia.org/wikipedia/en/9/9b/Luke_Skywalker.png')
+}
+
+.c-3po .characterImage {
+  --bg-url: url('https://upload.wikimedia.org/wikipedia/en/5/5c/C-3PO_droid.png')
+}
+
+.r2-d2 .characterImage {
+  --bg-url: url('https://upload.wikimedia.org/wikipedia/en/3/39/R2-D2_Droid.png')
+}
+
+.darth-vader .characterImage {
+  --bg-url: url('https://upload.wikimedia.org/wikipedia/en/0/0b/Darth_Vader_in_The_Empire_Strikes_Back.jpg')
+}
+
+.leia-organa .characterImage {
+  --bg-url: url('https://upload.wikimedia.org/wikipedia/en/1/1b/Princess_Leia%27s_characteristic_hairstyle.jpg')
+}
+
+.owen-lars .characterImage {
+  --bg-url: url('https://static.wikia.nocookie.net/starwars/images/e/eb/OwenCardTrader.png')
+}
+
+.beru-whitesun-lars .characterImage {
+  --bg-url: url('https://static.wikia.nocookie.net/starwars/images/c/cc/BeruCardTrader.png')
+}
+
+.r5-d4 .characterImage {
+  --bg-url: url('https://static.wikia.nocookie.net/starwars/images/c/cb/R5-D4_Sideshow.png')
+}
+
+.biggs-darklighter .characterImage {
+  --bg-url: url('https://upload.wikimedia.org/wikipedia/en/9/90/Biggsdarklighter.jpg')
+}
+
+.obi-wan-kenobi .characterImage {
+  --bg-url: url('https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Ben_Kenobi.png/330px-Ben_Kenobi.png')
+}
