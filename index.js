@@ -36,13 +36,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
       //create planet
       planetContainer = document.createElement('div')
-      planetContainer.classList.add('planet', planetName)
+      planetContainer.classList.add('planet', planetName, 'card-body')
 
       const keys = ['name','diameter','rotation_period','orbital_period','population','climate','terrain','surface_water']
       keys.forEach(key => {
         const value = data.result.properties[key]
         if (value) {
           const p = document.createElement('p')
+          p.classList.add('card-text')
           p.innerText = `${key}: ${value}`
           planetContainer.appendChild(p);
         } else {

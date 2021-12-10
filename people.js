@@ -37,13 +37,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
       //create character
       characterContainer = document.createElement('div')
-      characterContainer.classList.add('character', characterName)
+      characterContainer.classList.add('character', characterName, 'card-body')
 
       const keys = ['name','height','mass','hair_color','skin_color','eye_color','birth_year','gender']
       keys.forEach(key => {
         const value = data.result.properties[key]
         if (value) {
           const p = document.createElement('p')
+          p.classList.add('card-text')
           p.innerText = `${key}: ${value}`
           characterContainer.appendChild(p);
         } else {
