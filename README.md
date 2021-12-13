@@ -8,4 +8,9 @@ To run the project locally run:
 2. navigate to the project folder:
 ```cd CTD-Fetch-API```
 
-3. Open the file **_index.html_** with your favorite browser :)
+3. Open the file **_index.html_** with your favorite browser and use the select box to view the information.
+
+
+![](https://i.postimg.cc/K116Cdbg/ctd-000.jpg)
+
+![](https://i.postimg.cc/tYv0S9Kj/ctd-001.jpg)
