@@ -11,6 +11,6 @@ To run the project locally run:
 3. Open the file **_index.html_** with your favorite browser and use the select box to view the information.
 
 
-![](https://i.postimg.cc/K116Cdbg/ctd-000.jpg)
+![](https://i.postimg.cc/QjGCPNgL/ctd-000.jpg)
 
-![](https://i.postimg.cc/tYv0S9Kj/ctd-001.jpg)
+![](https://i.postimg.cc/TfWhC5Dq/ctd-001.jpg)
